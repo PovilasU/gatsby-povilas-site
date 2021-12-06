@@ -10,7 +10,7 @@ const Header = () => {
         <ul>
           <li>
             <Link className={headerStyles.link} to="/">
-              Home123
+              Home
             </Link>
           </li>
           <li>
