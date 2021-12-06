@@ -1,8 +1,10 @@
 import React from "react"
+import { Link } from "gatsby"
+import Layout from "../components/layout"
 
 const AboutPage = () => {
   return (
-    <article>
+    <Layout>
       <h1>About me</h1>
       <p>I currenty work full-time in a company Allente</p>
       <p>For this project I use Gatsby framework.</p>
@@ -11,7 +13,12 @@ const AboutPage = () => {
         React, GraphQL and Webpack into a single tool for building static
         websites and apps.
       </p>
-    </article>
+      <p>
+        {" "}
+        Want to contact me? &nbsp;
+        <Link to="/contact">Reach out.</Link>.
+      </p>
+    </Layout>
   )
 }
 
