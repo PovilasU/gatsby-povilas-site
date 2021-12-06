@@ -1,5 +1,11 @@
 import React from "react"
 
-export default function Blog() {
-  return <div>Blog</div>
+// export default function BlogPage() {
+//   return <div>Blog123</div>
+// }
+
+const BlogPage = () => {
+  return <div>Blog1234</div>
 }
+
+export default BlogPage
