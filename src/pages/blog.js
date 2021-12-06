@@ -1,11 +1,12 @@
 import React from "react"
 
-// export default function BlogPage() {
-//   return <div>Blog123</div>
-// }
-
 const BlogPage = () => {
-  return <div>Blog1234</div>
+  return (
+    <div>
+      <h1>Blog</h1>
+      <p>Posts wll show up here later on.</p>
+    </div>
+  )
 }
 
 export default BlogPage
