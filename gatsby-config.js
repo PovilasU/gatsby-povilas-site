@@ -27,6 +27,7 @@ module.exports = {
         accessToken: "lAf24-2QHpZNlzQvfH3yB4cuxoFt0H6iGZIIFis3RGM",
       },
     },
+    "gatsby-plugin-react-helmet",
     `gatsby-transformer-sharp`,
     "gatsby-plugin-sass",
     {
