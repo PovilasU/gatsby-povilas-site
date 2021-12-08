@@ -1,24 +1,16 @@
 import React from "react"
-import Layout from "../components/layout"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql } from "gatsby"
-
-// export const query = graphql`
-//   query ($slug: String!) {
-//     markdownRemark(fields: { slug: { eq: $slug } }) {
-//       frontmatter {
-//         title
-//         date
-//       }
-//       html
-//     }
-//   }
-// `
+import Layout from "../components/layout"
 
 export const query = graphql`
   query ($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishedDate(formatString: "MMM Do, YYYY")
+      body {
+        raw
+      }
     }
   }
 `
@@ -28,6 +20,9 @@ const Blog = props => {
     <Layout>
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.publishedDate}</p>
+      {documentToReactComponents(
+        JSON.parse(props.data.contentfulBlogPost.body.raw)
+      )}
     </Layout>
   )
 }
